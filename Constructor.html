@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Constructor</title>
+</head>
+
+<body>
+
+
+ <script>
+  function User(name) {
+   this.name = name;
+   this.isAdmin = false;
+  }
+  let user = new User("Jack");
+  let user1 = new User("john");
+  let user2 = new User;
+  alert(user.name);
+  alert(user1.name);
+  alert(user.isAdmin);
+
+
+
+  function BigUser() {
+   this.name = 'john'; //return this
+   return {
+    name: "Godzilla" //override this
+   };
+  }
+  alert(BigUser().name);
+
+  function SmallUser() {
+   this.name = "john";
+   return;
+  }
+  alert(new SmallUser().name); //use parentheses
+
+ </script>
+</body>
+
+</html>
