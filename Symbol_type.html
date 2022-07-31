@@ -20,7 +20,20 @@
   // show a symbol
   // alert(id.toString());
   // description
-  alert(id.description);
+  // alert(id.description);
+  let id3 = Symbol("id3");
+  let user = {
+   name: "rony",
+   age: 23,
+   [id3]: 123
+  };
+  for (let key in user) alert(key); // name, age (no symbols)
+
+  // the direct access by the symbol works
+  // alert("Direct: " + user[id3]);
+  // In contrast, Object.assign copies both string and symbol properties:
+  let clone = Object.assign({}, user);
+  alert(clone[id3]);
 
  </script>
 </body>
