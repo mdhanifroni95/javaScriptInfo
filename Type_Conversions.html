@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+
+ <body>
+
+  <script>
+   // Type Conversions
+   //String Conversion
+   // let value = true;
+   // alert(typeof value);
+   // value = String(value);
+   // alert(typeof value);
+   // alert("6" / "3");
+   let str = "123";
+   alert(typeof str);
+   let nu = Number(str);
+   alert(typeof nu);
+   if (n > 0) {
+    alert(`Power ${n} is not supported`);
+   }
+
+   function pow(x, n) {
+    if (n < 0) {
+     alert("Negative 'n' not supported");
+    } else {
+     let result = 1;
+     for (let i = 0; i < n; i++) {
+      result *= x;
+     }
+     return result;
+    }
+   }
+
+   pow(4, 2);
+
+  </script>
+ </body>
+
+</html>
