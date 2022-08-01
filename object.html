@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+
+ <body>
+
+
+  <script>
+   // let user = {
+   //  name: "john",
+   //  age: 30
+   // }
+   // user.sayHi = function () {
+   //  alert("Hello world");
+   // };
+   // user.sayHi();
+
+   // let user = {};
+
+   // function sayHi() {
+   //  alert("Hello");
+   // };
+   // then add as method
+   // user.sayHi = sayHi;
+   // user.sayHi();
+
+   // There exists a shorter syntax for methods in an object literal:
+   // these objects do the same
+   // let user = {
+   //  sayHi: function () {
+   //   alert("Hello");
+   //  }
+   // };
+
+   // method shorthand looks better, right?
+   // let user = {
+   //  sayHi() {
+   //   alert("Hello");
+   //  }
+   // }
+
+   // user.sayHi();
+
+   // let user = {
+   //  name: "john",
+   //  age: 30,
+   //  sayHi() {
+   //   this.name;
+   //  }
+   // };
+   // user.sayHi();
+
+   // let user = {
+   //  name: "john"
+   // };
+   // let admin = {
+   //  name: "admin"
+   // };
+
+   // function sayHi() {
+   //  alert(this.name);
+   // }
+   // user.f = sayHi;
+   // admin.f = sayHi;
+   // user.f();
+   // admin.f();
+   // admin['f']();
+
+   // let user = {
+   //  firstName: "john",
+   //  sayHi() {
+   //   let arrow = () => this.firstName;
+   //  }
+   // }
+
+   function makeUser() {
+    return {
+     name: "john",
+     ref() {
+      return this;
+     }
+    };
+   }
+   let user = makeUser();
+   alert(user.ref().name);
+
+   let calculate = {
+    sum() {
+     return this.a + this.b;
+    },
+    mul() {
+     return this.a * this.b;
+    },
+    addition() {
+     return this.a - this.b;
+    },
+    division() {
+     return this.a / this.b;
+    },
+    read() {
+     this.a = +prompt('a?', 0);
+     this.b = +prompt('b?', 0);
+    }
+   };
+   calculate.read();
+   alert(calculate.sum());
+   alert(calculate.addition());
+   alert(calculate.mul());
+   alert(calculate.division());
+
+  </script>
+ </body>
+
+</html>
