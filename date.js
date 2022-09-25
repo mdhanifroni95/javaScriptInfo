@@ -65,5 +65,33 @@ function bench(f) {
   return Date.now() - start;
 }
 
-console.log("Time of DiffSubtract is:" + bench(diffSubtract) + "ms");
-console.log("Time DiffGetTime is:" + bench(diffGetTime) + "ms");
+// console.log("Time of DiffSubtract is:" + bench(diffSubtract) + "ms");
+// console.log("Time DiffGetTime is:" + bench(diffGetTime) + "ms");
+
+let time1 = 0;
+let time2 = 0;
+// run bench(diffSubtract) and bench(diffGetTime) each 10 times alternating
+for (let i = 0; i < 10; i++) {
+  time1 += bench(diffSubtract);
+  time2 += bench(diffGetTime);
+}
+
+console.log("Time of DiffSubtract is:" + bench(diffSubtract) + time1);
+console.log("Time of DiffSubtract is:" + bench(diffGetTime) + time2);
+
+let ms = Date.parse("2012-01-26T13:51:50.417-07:00");
+console.log(ms);
+
+let parseDate = new Date(Date.parse("2012-01-26T13:51:50.417-07:00"));
+console.log(parseDate);
+
+console.log(`Loading started ${performance.now()} ms ago`);
+
+// Example:01 Show a weekday
+let weekDay = new Date(2014, 0, 3);
+function getWeekDay(weekDay) {
+  let days = ["SU", "MO", "TU", "WE", "TH", "FR", "ST"];
+  return days[weekDay.getDay()];
+}
+
+console.log(getWeekDay(weekDay));
