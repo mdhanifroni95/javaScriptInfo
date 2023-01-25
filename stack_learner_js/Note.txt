@@ -1,0 +1,28 @@
+03. How to use this course content
+- Always Use Notebook
+- Always Type Code Editor do not copy code. do not push video right code. complete video than write code
+- Find Related Example and Create Example
+- Spend Some Moment on Each Chapter..( Read Other resources. One Resource did not Preftley learn)
+- Discuss with Oters What You have Learned
+
+Course Structure Is Organised and Loosely Coupled
+- Programming Basics
+- Logic and Conditions
+- Loops And Repetition
+- Handling Strings
+- Arrays
+- Object
+- Function
+- Functional Programming
+- Scope and Closure
+- OOP Intro
+- OOP With JS
+- Prototype
+- Prototypical Inheritance
+- ES6
+- Error Handling
+- Asynchronous Programming
+- DOM
+- Project
+- Javascript Libraries
+- Future Road Map
