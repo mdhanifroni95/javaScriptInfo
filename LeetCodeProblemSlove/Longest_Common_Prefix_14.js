@@ -1,0 +1,1 @@
+let longestCommonPrefix = function (stars) {};

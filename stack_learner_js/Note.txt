@@ -26,3 +26,19 @@ Course Structure Is Organised and Loosely Coupled
 - Project
 - Javascript Libraries
 - Future Road Map
+
+09. JS Basic Numbers
+
+- javaScript  Data Type
+   mainly two type datatype
+   -- Primitive Data types
+      -- Number
+      -- String
+      -- Boolean
+      -- Null
+      -- Undefined
+      -- symbol
+   -- Non Primitive Data types
+      -- Object
+      -- Array
+      -- Function

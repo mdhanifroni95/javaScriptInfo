@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Js Event</title>
+</head>
+<body>
+ <p id="demo"></p>
+
+ <button type="button" onclick="document.getElementById('demo').innerHTML=Date()">This is time</button>
+ <button type="button" onclick="this.innerHTML=Date();">This is own time</button>
+ <button type="button" onclick="displayDate()">The is time</button>
+ <p id="demo1"></p>
+ <script>
+  function displayDate ()
+  {
+   document.getElementById( 'demo1' ).innerHTML = Date();
+  }
+ </script>
+</body>
+</html>

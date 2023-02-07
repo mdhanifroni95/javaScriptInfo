@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Document</title>
+</head>
+<body>
+ <div id="div1">
+  <button id="c1">Add</button>
+ </div>
+
+ <script>
+  //Event Capturing
+
+  // var parent = document.querySelector( '#div1' );
+  // var child = document.querySelector( '#c1' );
+
+  // parent.addEventListener( 'click', function ()
+  // {
+  //  console.log( "parent is invoked" );
+  // }, true );
+
+  // child.addEventListener( "click", function ()
+  // {
+  //  console.log( "child is invoked" );
+  // } );
+
+  // Evnet Bubbling
+  var parent = document.querySelector( '#div1' );
+  var child = document.querySelector( '#c1' );
+  parent.addEventListener( 'click', function ()
+  {
+   console.log( "parent is invoked" );
+  } );
+
+  child.addEventListener( "click", function ()
+  {
+   console.log( "child is invoked" );
+  } );
+ </script>
+</body>
+</html>

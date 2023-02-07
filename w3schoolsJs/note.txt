@@ -1,0 +1,2 @@
+-- With let, redeclaring a variable in the same block is NOT allowed:
+-- Redeclaring a variable with let, in another block, IS allowed:
