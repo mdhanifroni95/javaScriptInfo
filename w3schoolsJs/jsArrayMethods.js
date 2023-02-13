@@ -1,7 +1,8 @@
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 console.log(fruits.toString());
 console.log(fruits.join("*"));
-console.log(fruits.pop());
+fruits.pop();
+console.log(fruits);
 fruits.push("Lemon");
 console.log(fruits);
 console.log(fruits.shift());
@@ -14,6 +15,10 @@ const myBoys = ["Roy", "jon", "hassan"];
 const myAnimal = ["dog", "cat", "doll"];
 const myChidden = myGirls.concat(myBoys, myAnimal);
 console.log(myChidden);
+
+// Example (Merging an Array with Values)
+const myChidden1 = myGirls.concat("ifrat");
+console.log(myChidden1);
 
 // Splicing and Slicing Arrays
 myGirls.splice(1, 2, "ifrat", "jahan");
