@@ -30,3 +30,28 @@ const getter = function ( name, callback )
 
 const callMe = () => { console.log( `I am callback function` ) }
 getter( "rony", callMe );
+
+//Synchronous Programming
+function someLongRunningFun ()
+{
+ let start = Date.now();
+ while ( Date.now() - start < 5000 )
+ {
+  //do nothing
+ }
+ return "Hello";
+}
+
+console.log( 'Starting...' );
+let result3 = someLongRunningFun();
+console.log( result3 );
+console.log( '...Finishing' );
+
+//Asynchronous Programming
+console.log( 'Start of script' );
+setTimeout( () =>
+{
+ console.log( "First timeout expired" );
+}, 2000 );
+
+console.log( 'End of script' );
