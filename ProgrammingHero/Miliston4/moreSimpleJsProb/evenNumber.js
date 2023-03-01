@@ -9,9 +9,15 @@ const evenNumber = function ( num )
   {
    evenNum[ j++ ] = element;
   }
+
+  //bigger 80 
+  // if ( element > 80 )
+  // {
+  //  evenNum[ j++ ] = element;
+  // }
  }
  return evenNum;
 }
 
-const checkEvenNum = evenNumber( [ 23, 34, 33, 12, 77, 56, 99 ] );
+const checkEvenNum = evenNumber( [ 23, 34, 33, 12, 77, 56, 99, 85 ] );
 console.log( `Even Number is ${ checkEvenNum }` );
