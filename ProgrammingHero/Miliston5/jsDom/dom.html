@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Dom</title>
+</head>
+<body>
+ <header>
+  <h2>This is My header</h2>
+ </header>
+ <main>
+  <section>
+   <article>
+    <h3>This is article 1</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam sapiente eius nostrum quam deleniti id
+     corporis. Totam corrupti placeat veniam asperiores optio exercitationem dolore laborum, reiciendis eum, ipsam, nemo
+     alias.</p>
+   </article>
+   <article>
+    <h3>This is article 2</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam sapiente eius nostrum quam deleniti id
+     corporis. Totam corrupti placeat veniam asperiores optio exercitationem dolore laborum, reiciendis eum, ipsam, nemo
+     alias.</p>
+   </article>
+   <article>
+    <h3>This is article 3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam sapiente eius nostrum quam deleniti id
+     corporis. Totam corrupti placeat veniam asperiores optio exercitationem dolore laborum, reiciendis eum, ipsam, nemo
+     alias.</p>
+   </article>
+  </section>
+ </main>
+
+ <script>
+  const blogH3 = document.getElementsByTagName( 'h3' );
+  for ( const he of blogH3 )
+  {
+   console.log( he.innerText );
+  }
+
+ </script>
+</body>
+</html>
