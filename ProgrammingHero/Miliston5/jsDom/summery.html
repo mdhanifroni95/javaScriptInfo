@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Summary</title>
+</head>
+<body>
+ <h1>Friend</h1>
+ <ul id="friendUl">
+  <li>Friend 1</li>
+  <li>Friend 2</li>
+  <li>Friend 3</li>
+  <li>Friend 4</li>
+ </ul>
+ <script>
+  const friendUl = document.getElementById( "friendUl" );
+  const friendList = friendUl.children[ 3 ];
+  console.log( friendList );
+  friendUl.removeChild( friendList );
+ </script>
+</body>
+</html>
