@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>More Event</title>
+</head>
+<body>
+ <h1>More Event</h1>
+ <p id="deleteP">This is delete paragraph</p>
+ <input type="text" placeholder="please enter delete" id="inputEvent">
+ <button id="deleteEvent" disabled>Delete</button>
+ <script>
+  //click event
+  document.querySelector( "#deleteEvent" ).addEventListener( "click", () =>
+  {
+   document.querySelector( "#deleteP" ).style.display = 'none';
+  } );
+
+  //focus event
+  document.querySelector( "#inputEvent" ).addEventListener( 'focus', () =>
+  {
+   document.body.style.backgroundColor = "lightgreen";
+  } )
+
+  //blur event
+  document.querySelector( "#inputEvent" ).addEventListener( 'blur', () =>
+  {
+   document.body.style.backgroundColor = 'white';
+  } )
+
+  //keydown event
+  // document.querySelector( "#inputEvent" ).addEventListener( 'keydown', () =>
+  // {
+  //  const valueInput = document.querySelector( "#inputEvent" );
+  //  console.log( valueInput.value )
+  // } )
+  //keypress event
+  // document.querySelector( "#inputEvent" ).addEventListener( 'keypress', () =>
+  // {
+  //  const valueInput = document.querySelector( "#inputEvent" );
+  //  console.log( valueInput.value )
+  // } )
+
+  //keyup event
+  document.querySelector( "#inputEvent" ).addEventListener( 'keyup', ( event ) =>
+  {
+   const deleteBtn = document.querySelector( "#deleteEvent" );
+   if ( event.target.value == 'delete' )
+   {
+    deleteBtn.removeAttribute( 'disabled' )
+   } else
+   {
+    deleteBtn.setAttribute( 'disabled', true )
+   }
+  } )
+
+  //change event
+  document.querySelector( "#inputEvent" ).addEventListener( 'change', () =>
+  {
+   const valueInput = document.querySelector( "#inputEvent" );
+   console.log( valueInput.value );
+  } )
+ </script>
+</body>
+</html>

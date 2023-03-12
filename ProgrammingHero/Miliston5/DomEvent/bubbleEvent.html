@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Event Bubble</title>
+</head>
+<body>
+ <section id="sectionItem">
+  <h1>Event Bubble</h1>
+  <p>This is event bubble</p>
+  <ul id="ul-item">
+   <li>Lorem ipsum, dolor</li>
+   <li id="second-li">Lorem ipsum, dolor</li>
+   <li>Lorem ipsum, dolor</li>
+   <li>Lorem ipsum, dolor</li>
+   <li>Lorem ipsum, dolor</li>
+   <li>Lorem ipsum, dolor</li>
+  </ul>
+ </section>
+ <script>
+  document.querySelector( "#second-li" ).addEventListener( 'click', ( event ) =>
+  {
+   console.log( 'second item click1' );
+   event.stopImmediatePropagation();
+  } );
+  document.querySelector( "#second-li" ).addEventListener( 'click', ( event ) =>
+  {
+   console.log( 'second item click2' );
+   event.stopPropagation();
+  } );
+  document.querySelector( "#second-li" ).addEventListener( 'click', ( event ) =>
+  {
+   console.log( 'second item click3' );
+   event.stopPropagation();
+  } );
+  document.querySelector( "#second-li" ).addEventListener( 'click', ( event ) =>
+  {
+   console.log( 'second item click' );
+   event.stopPropagation();
+  } );
+
+  document.querySelector( "#ul-item" ).addEventListener( 'click', () =>
+  {
+   console.log( 'ul item click' );
+  } )
+  document.querySelector( "#sectionItem" ).addEventListener( 'click', () =>
+  {
+   console.log( 'section Item click' );
+  } )
+
+ </script>
+</body>
+</html>
