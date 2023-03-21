@@ -8,6 +8,7 @@
  <title>Banking</title>
 </head>
 <body>
+ <div class="container mx-auto">
  <main>
   <header>
    <h1 class="text-center text-5xl mb-10 mt-6">Let's get some <span class="text-purple-600">Mooooney</span></h1>
@@ -16,31 +17,38 @@
    <div class="grid grid-cols-3 gap-4">
     <div class="bg-green-400 p-7 text-center rounded-sm">
      <h4 class="text-lg">Deposit</h4>
+     <h3>$ <span id="depositTotal">00</span></h3>
     </div>
     <div class="bg-purple-400 p-7 text-center rounded-sm">
      <h4 class="text-lg">Windrow</h4>
     </div>
     <div class="bg-rose-300 p-7 text-center rounded-sm">
-     <h4 class="text-lg">Share</h4>
+     <h4 class="text-lg">Blanche</h4>
+     <h3>$ <span id="blancheTotal">1200</span></h3>
     </div>
    </div>
   </section>
+
   <section class="w-3/4 mx-auto mt-7">
    <div class="grid grid-cols-2 gap-4">
     <div class="bg-teal-300 p-7 rounded-sm">
      <p class="text-md">Please Deposit</p>
-     <input type="text" name="deposit_text" id="deposit_text"
+     <input type="text" name="deposit_input" id="deposit_input"
       class="mt-2 p-1 block mb-2 w-2/3 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-300 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
-     <button class="bg-amber-400 p-1 rounded block">Submit</button>
+     <button type="submit" class="bg-amber-400 p-1 rounded block" id="deposit_button">Submit</button>
     </div>
+
     <div class="bg-lime-300 p-7 rounded-sm">
-     <p class="text-md">Please Deposit</p>
-     <input type="text" name="deposit_text" id="deposit_text"
+     <p class="text-md">Please Windrow</p>
+     <input type="text" name="windrow_input" id="windrow_input"
       class="mt-2 p-1 block mb-2 w-2/3 border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-300 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
-     <button class="bg-amber-400 p-1 rounded block">Submit</button>
+     <button class="bg-amber-400 p-1 rounded block" id="windrow_button">Submit</button>
     </div>
    </div>
   </section>
  </main>
+</div>
+
+<script src="js/bank.js"></script>
 </body>
 </html>

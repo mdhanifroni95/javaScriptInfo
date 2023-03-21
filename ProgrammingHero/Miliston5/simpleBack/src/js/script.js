@@ -7,3 +7,4 @@ document.querySelector( "#btn_submit" ).addEventListener( "click", () =>
   window.location.href = 'banking.html';
  }
 } );
+
