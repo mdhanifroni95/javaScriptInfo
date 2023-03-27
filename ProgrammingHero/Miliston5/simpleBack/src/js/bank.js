@@ -1,30 +1,38 @@
+const getInputValue = function ( inputValue )
+{ 
+ //deposit inputed
+ const InputVal = document.querySelector( inputValue );
+
+ //deposit Amount form user
+ const inputAmount = parseFloat( InputVal.value );
+
+ InputVal.value = '';
+ return inputAmount;
+}
+
+const getPrevValue = function ( inputPrev )
+{
+ const Total = document.querySelector( inputPrev );
+
+ const previousAmount = parseFloat( Total.innerText );
+ return previousAmount;
+}
 
 document.querySelector( "#deposit_button" ).addEventListener( 'click', () =>
 {
- //deposit inputed
- const depositInput = document.querySelector( "#deposit_input" );
+ const depositAmount = getInputValue( "#deposit_input" );
 
- //deposit Amount form user
- const depositAmount = parseFloat( depositInput.value );
-
- const depositTotal = document.querySelector( "#depositTotal" );
-
- const previousAmount = parseFloat( depositTotal.innerText );
-
- // console.log( previousAmount, depositAmount );
+ //previous amount
+ const previousAmount = getPrevValue( "#depositTotal" )
 
  //update blanched amount
  const updateDepositAmount = parseFloat( previousAmount + depositAmount );
 
  depositTotal.innerText = updateDepositAmount;
-
- depositInput.value = '';
  // console.log( previousAmount );
 
  //Blanche 
- const blancheTotal = document.querySelector( "#blancheTotal" );
-
- const previousBlanche = parseFloat( blancheTotal.innerText );
+ const previousBlanche = getPrevValue( "#blancheTotal" );
 
  const updateBlanche = previousBlanche + updateDepositAmount;
 
@@ -33,3 +41,23 @@ document.querySelector( "#deposit_button" ).addEventListener( 'click', () =>
  blancheTotal.innerText = updateBlanche;
 
 } );
+
+document.querySelector( "#windrow_button" ).addEventListener( 'click', () =>
+{
+ //windrow value
+ const windrowVal = getInputValue( "#windrow_input" )
+
+ //windrow amount from user
+ // const windrowTotal = document.getElementById( "windrowTotal" );
+ const PreWindrowValue = getPrevValue( "#windrowTotal" );
+
+ const updateWindrow = parseFloat( PreWindrowValue + windrowVal );
+ windrowTotal.innerText = updateWindrow;
+
+ //update blanch
+ const prevBlanche = getPrevValue( "#blancheTotal" );
+
+ const updateBlanche = prevBlanche - updateWindrow;
+ blancheTotal.innerText = updateBlanche;
+
+} )
